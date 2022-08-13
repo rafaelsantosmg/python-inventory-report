@@ -10,7 +10,7 @@ class CompleteReport(SimpleReport):
             for prod in list
             if prod.get("nome_da_empresa")
         )
-        complete_report = simple_report + "Produtos estocados por empresa:\n"
+        complete_report = simple_report + "\nProdutos estocados por empresa:\n"
         for key, value in empresas.items():
             complete_report += f"- {key}: {value}\n"
 

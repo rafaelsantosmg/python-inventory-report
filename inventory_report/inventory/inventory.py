@@ -20,12 +20,11 @@ class Inventory:
         tree = ET.parse(file_path)
         root = list(tree.getroot())
         dict_list = list()
-        info_dict = dict()
         for index in range(len(root)):
+            info_dict = dict()
             for info in root[index]:
                 info_dict[info.tag] = info.text
             dict_list.append(info_dict)
-            info_dict = {}
         return dict_list
 
     def select_file(file_path):
